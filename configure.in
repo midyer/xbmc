@@ -1202,7 +1202,7 @@ fi
 
 USE_GSTREAMER=0
 if test "x$use_gstreamer" != "xno"; then
-  PKG_CHECK_MODULES([GST], [gstreamer-0.10 >= 0.10.30],,[use_gstreamer="no";AC_MSG_RESULT($gst_disabled)])
+  PKG_CHECK_MODULES([GST], [gstreamer-0.10 >= 0.10.28 glib-2.0 gstreamer-interfaces-0.10],,[use_gstreamer="no";AC_MSG_RESULT($gst_disabled)])
     if test "x$use_gstreamer" != "xno"; then
       INCLUDES="$INCLUDES $GST_CFLAGS";LIBS="$LIBS $GST_LIBS"
       USE_GSTREAMER=1;AC_DEFINE([HAVE_GSTREAMER],[1],["Define to 1 if gstreamer is installed"])
