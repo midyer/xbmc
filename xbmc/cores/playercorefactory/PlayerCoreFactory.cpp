@@ -306,6 +306,7 @@ bool CPlayerCoreFactory::LoadConfiguration(TiXmlElement* pConfig, bool clear)
       if (type == "dvdplayer" || type == "mplayer") eCore = EPC_DVDPLAYER;
       if (type == "paplayer" ) eCore = EPC_PAPLAYER;
       if (type == "externalplayer" ) eCore = EPC_EXTPLAYER;
+      if (type == "gstplayer" ) eCore = EPC_GSTPLAYER;
 
       if (eCore != EPC_NONE)
       {
